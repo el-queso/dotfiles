@@ -178,13 +178,6 @@ alias shellcraft="pwn shellcraft"
 alias wttr='~/scripts/wttr.sh'
 alias cht='~/scripts/cht.sh'
 
-# SSH Connection
-alias sshfanky='ssh fanky@134.255.231.47 -p 61337'
-
-
-# Burp
-alias burp-pro='java -noverify -javaagent:'/home/fanky/scripts/BurpSuitePro-2.1/burp-loader-x-Ai.jar' -Xmx2048m -jar ~/Downloads/burpsuite_pro_v2020.11.3.jar'
-
 # Dotfiles management
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
