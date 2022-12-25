@@ -187,3 +187,7 @@ alias burp-pro='java -noverify -javaagent:'/home/fanky/scripts/BurpSuitePro-2.1/
 
 # Dotfiles management
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# VPN IP
+alias vpnip="ifconfig tun0 | grep 'inet ' | cut -d\t -f2 | cut -d' ' -f2"
+alias copy='xclip -selection clipboard'
