@@ -1,0 +1,10 @@
+// https://github.com/shvedes/dotfiles
+
+* {
+    background:                  #282c34;
+    background-alt:              #5c6370;
+    foreground:                  #abb2bf;
+    foreground-alt:              #cdd6f4;
+    urgent:                      #e06c75;
+    selected:                    @foreground-alt;
+}

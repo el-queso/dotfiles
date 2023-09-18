@@ -1,0 +1,75 @@
+
+@import "~/.config/rofi/colors/gruvbox-dark.rasi"
+@import "~/.config/rofi/fonts/fonts.rasi"
+
+configuration {
+    modi:                       "run";
+    drun-display-format:        "{name}";
+    hover-select:               true;
+    me-select-entry:            "";
+    me-accept-entry:            [ MousePrimary, MouseSecondary, MouseDPrimary ];
+}
+
+window {
+    location:                    north;
+    width:                       100%;
+    children:                    [ horibox ];
+}
+
+horibox {
+    background-color:            var(background);
+    text-color:                  var(foreground);
+    orientation:                 horizontal;
+    children:                    [ "prompt", "textbox-prompt-colon","entry", "listview" ];
+}
+
+prompt {
+    enabled: 				     false;
+}
+
+textbox-prompt-colon {
+    enabled:                     false;
+}
+entry {
+    enabled:                     true;
+    padding:                     2px;
+    expand:                      false;
+    width:                       200px;
+    background-color:            var(background);
+    text-color:                  var(foreground);
+    placeholder:                 " Search...";
+    cursor:                      text;
+}
+
+listview {
+    lines:                       100;
+    layout:                      horizontal;
+    spacing:                     15px;
+    background-color:            var(background);
+    text-color:                  var(foreground);
+}
+
+element {
+    enabled:                     true;
+    padding:                     1px;
+    background-color:            var(background);
+    text-color:                  var(foreground);
+    cursor:                      pointer;
+}
+
+element selected.normal {
+    background-color:            var(selected);
+    text-color:                  var(background);
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+
+textbox {
+    padding:                     1px;
+    background-color:            var(urgent);
+    text-color:                  var(foreground);
+}

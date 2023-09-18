@@ -1,0 +1,101 @@
+// https://github.com/shvedes/dotfiles
+
+@import "~/.config/rofi/colors/one-dark.rasi"
+@import "~/.config/rofi/fonts/fonts.rasi"
+
+
+configuration {
+	modi:                       "drun";
+    display-drun:               "";
+    me-select-entry:            "";
+    me-accept-entry:            [ MousePrimary, MouseSecondary, MouseDPrimary ];
+	drun-display-format:        "{name}";
+}
+
+window {
+    background-color:            var(background);
+    location:                    center;
+    anchor:                      center;
+    width:                       750px;
+}
+
+mainbox {
+    padding:                     10px;
+    border-color:                var(selected);
+    background-color:            var(background);
+    children:                    [ "inputbar", "listview" ];
+}
+
+inputbar {
+    padding:                     10px;
+    border:                      1px solid;
+    border-radius:               4px;
+    border-color:                var(selected);
+    background-color:            var(background);
+    text-color:                  var(foreground);
+    children:                    [ "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+}
+
+textbox-prompt-colon {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+entry {
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+}
+
+listview {
+    lines:                       8;
+    cycle:                       true;
+    
+    background-color:            var(background);
+    text-color:                  var(foreground);
+    cursor:                      "default";
+}
+
+element {
+    padding:                     10px;
+    margin:                      7px;
+    border-color:                var(selected);
+    background-color:            var(background);
+    text-color:                  var(foreground);
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            var(background);
+    text-color:                  var(foreground);
+}
+
+element selected.normal {
+    border:                      1px solid;
+    border-radius:               4px;
+    border-color:                var(background-alt);
+    background-color:            var(selected);
+    text-color:                  var(background);
+}
+
+element-text {
+    background-color:            inherit;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+}
+
+error-message {
+    padding:                     10px;
+    background-color:            var(urgent);
+}
+
+textbox {
+    background-color:            inherit;
+    text-color:                  var(background);
+}
+

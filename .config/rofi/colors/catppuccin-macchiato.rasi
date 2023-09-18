@@ -1,0 +1,12 @@
+// catppuccin macchiato
+// https://github.com/shvedes/dotfiles
+
+* {
+    background:     #24273a;
+    background-alt: #292c3c;
+    foreground:     #FFFFFFFF;
+    foreground-alt: #aaaaaa;
+    selected:       #b4befe;
+    active:         #98C379FF;
+    urgent:         #E06C75FF;
+}
