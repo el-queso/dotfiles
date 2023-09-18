@@ -36,10 +36,10 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
 
-# pacman and yay
+# pacman and paru
 alias pacsyu="sudo pacman -Syyu"                 # update only standard pkgs
-alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
-alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
+alias parusua="paru -Sua --noconfirm"              # update only AUR pkgs
+alias parusyu="paru -Syu --noconfirm"              # update standard pkgs and AUR pkgs
 alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
 alias cleanup="sudo pacman -Rns $(pacman -Qtdq)" # remove orphaned packages
 alias pacskey="sudo pacman -S archlinux-keyring" # Update keyrings
@@ -70,9 +70,6 @@ alias uni='${=EDITOR} ~/documents/uniProgram.md' # Quick access to uni program
 # Colorize grep output
 alias grep='grep --color=auto'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} --color=auto'
-
-#fix the tmux thing
-alias tmux="tmux -2"
 
 alias t='tail -f'
 
@@ -144,11 +141,6 @@ alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 # receive the key of a developer
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
-# Uni
-alias sshdb="ssh lab2021omada2@dblab.nonrelevant.net -p 22210"
-alias asdf="cd /media/hdd/uni/"
-
-# hacking
 alias copy='xclip -selection clipboard'
 
 # from muspelheim
@@ -184,3 +176,10 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # VPN IP
 alias vpnip="ifconfig tun0 | grep 'inet ' | cut -d\t -f2 | cut -d' ' -f2"
 alias copy='xclip -selection clipboard'
+
+# Preview Camera
+alias camera="mpv av://v4l2:/dev/video0 --profile=low-latency --untimed"
+
+
+# Rot
+alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
