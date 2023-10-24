@@ -1,0 +1,10 @@
+#!/bin/bash
+# https://github.com/shvedes/dotfiles
+
+export XAUTHORITY=/home/shved/.Xauthority
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+
+ICON="$HOME/.local/bin/notifications/icons/mouse.png"
+
+notify-send -r 997 -i $ICON "USB mouse connected"

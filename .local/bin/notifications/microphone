@@ -1,0 +1,26 @@
+#!/bin/bash
+# https://github.com/shvedes/dotfiles
+
+function get_status {
+    STATUS=$(pactl get-source-mute @DEFAULT_SOURCE@ | sed 's/Mute: //')
+    echo $STATUS
+}
+
+function send_notification {
+    ICON="  "
+    ICON_MUTED="  "
+    STATUS=$(get_status)
+
+    if [ "$STATUS" == "yes" ]; then
+        dunstify -r 999 -u normal "$ICON_MUTED"
+    else
+        dunstify -r 999 -u normal "$ICON"
+    fi
+}
+
+case $1 in
+    toggle) 
+        pactl set-source-mute @DEFAULT_SOURCE@ toggle
+        send_notification
+        ;;
+esac
