@@ -1,0 +1,6 @@
+#!/bin/bash
+# https://github.com/shvedes/dotfiles
+
+bspc config normal_border_color        \#4f5b66     
+bspc config focused_border_color       \#88c0d0     
+bspc config active_border_color        \#56b6c2     
